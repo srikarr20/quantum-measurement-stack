@@ -70,3 +70,10 @@ They must be interpreted in accordance with the constraints defined here.
 This document is authoritative with respect to stack ordering, causality,
 and irreversibility.
 
+### Canonical Benchmark
+
+The Quantum Measurement Stack is operationally instantiated by the
+**QMCTB-01: Detector-Plane Causality Benchmark** (`qmctb/QMCTB-01.md`),
+which provides a concrete experimental test of the causal ordering and
+irreversibility defined in this document.
+
