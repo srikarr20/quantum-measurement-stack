@@ -1,3 +1,8 @@
+
+# QMCTB-01 v1.0 — FROZEN BENCHMARK
+# Do not modify without incrementing benchmark version
+
+
 from pathlib import Path
 
 ARTIFACT_DIR = Path("qmctb/artifacts")

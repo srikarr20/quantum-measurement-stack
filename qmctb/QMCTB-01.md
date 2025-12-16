@@ -1,3 +1,14 @@
+
+# QMCTB-01 — Detector-Plane Causality Benchmark
+
+**Status:** FROZEN (v1.0)  
+**Purpose:** Reference benchmark for detector-plane causality  
+**Last modified:** Do not edit experimental logic without version bump
+
+QMCTB-01 is a frozen benchmark. All future detector-plane experiments
+must reference this test bench without modification.
+
+
 # QMCTB-01  
 ## Detector-Plane Causality Benchmark
 
@@ -138,4 +149,27 @@ Control actions apply only to future runs.
 
 Successful execution establishes detector-plane causality and validates the
 Quantum Measurement & Control Test Bench architecture.
+
+---
+
+## 13.  Acceptance Criteria (v1.0)
+
+A QMCTB-01 run is considered **PASS** if and only if:
+
+1. Correlation-preserving mode yields:
+   - Visibility ≥ 0.8
+   - Stable under frame increase (N ≥ 100)
+
+2. Correlation-destroying mode yields:
+   - Visibility → 0 as N increases
+   - No emergent fringes under averaging
+
+3. Artifact image is generated and stored in:
+   - `qmctb/artifacts/qmctb_01_<frames>_<tag>.png`
+
+4. QCS returns:
+   - `RunStatus.ACCEPT`
+   - `FailureClass.NONE`
+
+Any violation constitutes a **FAIL**.
 
