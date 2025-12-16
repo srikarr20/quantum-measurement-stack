@@ -1,3 +1,9 @@
+
+## Benchmark Status
+
+- **QMCTB-01**: Frozen baseline benchmark (detector-plane causality)
+
+
 # Quantum Measurement & Control Test Bench (QMCTB)
 
 The Quantum Measurement & Control Test Bench (QMCTB) defines a set of **canonical,

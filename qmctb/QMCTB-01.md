@@ -1,6 +1,19 @@
 
 # QMCTB-01 — Detector-Plane Causality Benchmark
 
+**Status:** 🔒 Frozen (Baseline Benchmark)
+
+QMCTB-01 is validated and considered complete.  
+It serves as the canonical baseline for demonstrating detector-plane causality
+and visibility-based certification in the Quantum Measurement & Control Test Bench (QMCTB).
+
+No further modifications to logic, thresholds, or control flow are permitted.
+Future QMCTB experiments must reference this benchmark without altering it.
+
+
+
+# QMCTB-01 — Detector-Plane Causality Benchmark
+
 **Status:** FROZEN (v1.0)  
 **Purpose:** Reference benchmark for detector-plane causality  
 **Last modified:** Do not edit experimental logic without version bump
