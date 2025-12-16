@@ -1,75 +1,101 @@
-# Quantum Measurement Stack (QMS)
+## The Quantum Measurement Stack
 
-The Quantum Measurement Stack (QMS) is a full-stack framework for understanding,
-diagnosing, and controlling quantum systems by treating measurement as a
-causal, physical, and engineering process.
+The Quantum Measurement Stack is a causally ordered measurement and control
+pipeline. Quantum information flows strictly downward through irreversible
+layers. Each layer determines what survives to the next.
 
-Rather than viewing interference, decoherence, and entanglement failure as
-interpretive or observer-dependent phenomena, QMS localizes them within a
-structured measurement and control pipeline that spans physical emergence,
-hardware measurement, data acquisition, diagnostics, and system-level control.
-
----
-
-## The Canonical Measurement Stack
-
-Quantum behavior propagates through five causal layers:
-
-1. **Imprint Field Dynamics**  
-   Physical interaction between particles and fields generates phase, timing,
-   and spatial imprints prior to measurement.
-
-2. **Detector Plane Imaging**  
-   Detector architecture determines whether correlations are preserved or
-   destroyed during measurement. Measurement causality is localized here.
-
-3. **DAQ Integrity Layer**  
-   Digitization, sampling, thresholding, and classical processing determine
-   which correlations survive data acquisition.
-
-4. **Quantum Diagnostics**  
-   Surviving correlations are quantified using metrics such as visibility,
-   fidelity, concurrence, and syndrome statistics. Decoherence can be injected
-   deliberately for stress testing.
-
-5. **Quantum Operating System (QOS)**  
-   A system-level control layer that manages coherence budgets, entanglement
-   lifecycles, measurement policy, noise-aware scheduling, and recovery from
-   entanglement failure.
-
-This stack transforms quantum measurement from a philosophical problem into an
-engineering discipline.
-
----
-
-## Core Principles
-
-- Quantum “collapse” is a localized information-loss event within the
-  measurement pipeline, not a nonlocal physical mystery.
-- Decoherence can be engineered, injected, detected, and classified.
-- Entanglement failure is diagnosable and manageable at the system level.
-- Reliable quantum systems require diagnostics before control and control
-  before scaling.
-
----
-
-## Scope
-
-This repository provides:
-- Conceptual definitions of each layer
-- Reference models and simulations
-- Diagnostic and stress-testing methodologies
-- Foundations for a Quantum Operating System (QOS)
-
-It does not propose new quantum mechanics. It provides a framework for building
-quantum systems that can be reasoned about, tested, and controlled.
-
----
-
-## Status
-
-This repository begins as a clean architectural framework.
-Implementations will be added incrementally, layer by layer.
+The stack is defined box-by-box below.
 
 
+### 1. Imprint Field Dynamics
+
+**Role**  
+Physical propagation, interactions, and boundary conditions generate structured
+phase, timing, and spatial correlations in fields.
+
+**Key properties**
+- Entirely pre-measurement and observer-independent
+- Governed by standard physical dynamics
+- Defines what correlations physically exist
+
+**Output**  
+Coherent imprint field
+
+
+### 2. Detector Plane Imaging
+
+**Role**  
+Detector architecture couples to the imprint field and determines whether
+correlations are preserved or destroyed during measurement.
+
+**Key properties**
+- Measurement causality is localized here
+- Detector architecture is not neutral
+- Correlation loss here is irreversible
+
+**Output**  
+Analog detector signals
+
+
+### 3. DAQ Integrity
+
+**Role**  
+Digitization, sampling, timing, thresholding, and binning determine which
+accessible correlations survive into permanent digital records.
+
+**Key properties**
+- Data acquisition is an active causal layer
+- Undersampling and over-binning destroy information
+- No post-processing can recover lost correlations
+
+**Output**  
+Discrete digital datasets
+
+
+### 4. Quantum Diagnostics
+
+**Role**  
+Statistical analysis and validation quantify what survived the measurement
+pipeline and with what confidence.
+
+**Key properties**
+- Computes visibility, fidelity, correlations, and error rates
+- Decoherence can be injected deliberately for stress testing
+- Inference only — no control actions
+
+**Output**  
+Validated diagnostic metrics
+
+
+### 5. QCS — Quantum Control System
+
+**Role**  
+System-level control layer that uses validated diagnostics to manage quantum
+resources and orchestrate future experimental cycles.
+
+**Key properties**
+- Manages coherence budgets and entanglement lifecycles
+- Enforces measurement policy and scheduling
+- Handles retry, reset, and recovery from entanglement failure
+- Acts only forward in time
+
+**Output**  
+Control actions for next experimental run
+
+
+### Core Rules of the Stack
+
+- Causality flows strictly downward.
+- Each layer introduces irreversible information loss.
+- Higher layers cannot repair or reinterpret lower-layer loss.
+- Control exists only at the top and only forward in time.
+
+
+## Formal Definition
+
+The formal definition, governing rules, and causal constraints of the Quantum
+Measurement Stack are specified in **DEFINITION.md**.
+
+That document is authoritative with respect to stack ordering,
+irreversibility, and the separation of inference and control.
 
