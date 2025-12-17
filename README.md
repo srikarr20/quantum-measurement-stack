@@ -1,3 +1,60 @@
+
+Canonical Measurement Block Diagram (QMCTB)
+
+┌──────────────────────────┐
+│  Field Excitation        │
+│                          │
+│  • Laser / coherent      │
+│    optical source        │
+│                          │
+│  (No measurement)        │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│  Double-Slit Aperture    │
+│                          │
+│  • Boundary conditions   │
+│  • Path superposition    │
+│  • Imprint formation    │
+│                          │
+│  (No measurement)        │
+└─────────────┬────────────┘
+              │
+              ▼
+┌────────────────────────────────────────────────────┐
+│  MEASUREMENT LAYER (Detector Plane Imaging)         │
+│                                                    │
+│  Physical:                                         │
+│  • Detector material (CMOS / EMCCD / ICCD / etc.)  │
+│  • Screen / phosphor / intensifier (if any)        │
+│                                                    │
+│  Electronic + Software:                            │
+│  • Integration / thresholding                      │
+│  • Timing resolution / binning                     │
+│  • Firmware & digitization                         │
+│  • Image / data formation                          │
+│                                                    │
+│  → Irreversible information loss occurs here       │
+└─────────────┬──────────────────────────────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│  Recorded Output         │                       │
+│ • Image / dataset       │
+  • Saved frame / file    │                       │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│  Operator / Observer     │
+  • Views / analyzes      │
+│ • Interprets results    │
+│ (No causal influence)   │
+└──────────────────────────┘
+
+---
+
 > ⚠️ **Measurement Definition (Non-Negotiable)**
 >  
 > In this project, “the detector” means the *entire measurement pipeline*:
