@@ -1,3 +1,21 @@
+
+
+# Measurement Layer Definition (Non-Negotiable)
+
+In this framework, the “detector” refers to the *entire measurement pipeline*:
+the detector material, any screens or conversion stages, amplification,
+electronics, firmware, digitization, software processing, and the final output
+image or data stream.
+
+All of these components together constitute a single irreversible measurement
+layer. Once information is lost anywhere within this layer, it cannot be
+recovered by downstream processing.
+
+The operator or observer is not part of the measurement layer and has no causal
+influence on the physical outcome.
+
+---
+
 # Definition of the Quantum Measurement Stack
 
 This document provides the formal definition and governing rules of the

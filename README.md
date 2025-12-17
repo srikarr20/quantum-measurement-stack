@@ -1,3 +1,14 @@
+> ⚠️ **Measurement Definition (Non-Negotiable)**
+>  
+> In this project, “the detector” means the *entire measurement pipeline*:
+> detector material, screen or conversion stage, electronics, firmware,
+> digitization, software processing, and output display.  
+>  
+> The observer/operator is *not* part of the measurement layer and has no causal
+> influence on the physical outcome.
+>  
+> This definition is fixed and applies to all benchmarks in this repository.
+> See **DEFINITION.md** for the authoritative statement.
 
 
 # Quantum Measurement Stack
