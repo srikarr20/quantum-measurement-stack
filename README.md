@@ -1,3 +1,13 @@
+
+
+# Quantum Measurement Stack
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17966568.svg)](https://doi.org/10.5281/zenodo.17966568)
+
+The Quantum Measurement Stack is a causally ordered measurement and control
+pipeline.
+
+
 ## The Quantum Measurement Stack
 
 The Quantum Measurement Stack is a causally ordered measurement and control
