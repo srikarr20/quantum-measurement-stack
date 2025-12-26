@@ -1,3 +1,4 @@
+
 # Quantum Measurement Stack
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17966568.svg)](https://doi.org/10.5281/zenodo.17966568)
@@ -13,7 +14,8 @@ defined as the complete detector–electronics–software measurement pipeline.
 
 ## Canonical Measurement Stack
 
-![Quantum Measurement Stack](qmctb/artifacts/QMCTB-01_Measurement_Stack_BlockDiagram.png)
+![Quantum Measurement Stack](./qmctb/artifacts/QMCTB-01_Measurement_Stack_BlockDiagram.png)
+
 
 **Measurement boundary (non-negotiable):**  
 The detector plane includes detector material, conversion stages, readout
