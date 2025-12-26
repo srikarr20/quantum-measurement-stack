@@ -1,128 +1,85 @@
-Methods: QMCTB-01 — Detector Plane Causality Benchmark
+QMCTB-01 Methods
+Detector-Plane Causality Benchmark
+1. Overview and Scope
 
+QMCTB-01 is an instrumentation benchmark designed to evaluate detector-plane causality in quantum interference measurements. The benchmark uses a conventional double-slit optical geometry and standard wave-optics modeling, while explicitly decomposing the measurement process into causally ordered stages.
 
-Overview and Scope
+The objective of QMCTB-01 is to determine whether interference visibility is constrained by upstream field propagation or by local detector-plane coupling that preserves or destroys correlations.
 
-QMCTB-01 is a measurement benchmark, not a new physical experiment.
-It uses a conventional double-slit optical geometry but applies a non-standard causal decomposition of the measurement process.
+No modifications are made to physical laws, source properties, or propagation dynamics. All deviations from textbook descriptions arise solely from the explicit separation of measurement into irreversible operational layers.
 
-The goal of the benchmark is to isolate and test detector-plane causality:
-whether interference visibility is determined upstream by field propagation, or locally by detector-plane coupling that preserves or destroys correlations.
+2. Physical Geometry (Unmodified)
 
-No modifications are made to the underlying physical laws, source properties, or propagation dynamics. All deviations from textbook presentations arise solely from explicitly separating measurement into causally ordered layers.
+The physical layout corresponds to a standard near-field double-slit configuration:
 
-Physical Geometry (Unmodified)
+2.1 Field Excitation
 
-The physical layout corresponds to a standard double-slit experiment:
+A spatially coherent optical field is assumed (e.g., laser illumination). In simulation, this is modeled as a monochromatic scalar field.
 
-Coherent field excitation
-A spatially coherent optical field is assumed (e.g., laser illumination).
-In the simulation, this is modeled as a monochromatic scalar field.
+2.2 Aperture Plane
 
-Aperture plane (double slit)
-Two narrow slits separated by a fixed distance define two spatially separated propagation paths.
+Two narrow slits separated by a fixed distance define two spatially distinct propagation paths.
 
-Free-space propagation
-The field propagates from the aperture plane to the detection plane over distance 
+2.3 Free-Space Propagation
+
+The field propagates from the aperture plane to the detection plane over a distance 
 𝑧
-z.
-Paraxial Fresnel propagation is used, including quadratic phase factors.
+z. Paraxial Fresnel propagation is used, including quadratic phase factors.
 
-Detection plane
-A spatially resolved detection plane records the field-dependent response.
+2.4 Detection Plane
 
-This geometry is intentionally conventional to avoid confounding apparatus novelty with measurement causality.
+A spatially resolved detection plane records the field-dependent detector response.
 
-Causal Decomposition of the Measurement Process
+This geometry is intentionally conventional to avoid confounding measurement causality with apparatus novelty.
 
-The key methodological contribution of QMCTB-01 is the explicit separation of the experiment into five irreversible layers, each with a defined input and output.
+3. Causal Decomposition of the Measurement Process
 
-Stage 1: Imprint Field Dynamics (Pre-measurement)
+QMCTB-01 explicitly separates the experiment into five irreversible stages. Each stage has a defined input and output, and information lost at any stage cannot be recovered by subsequent processing.
 
-Input: Coherent excitation and aperture geometry
+4. Stage 1: Imprint Field Dynamics (Pre-Measurement)
 
-Process: Field propagation, interference, and phase accumulation
+Input:
+Coherent excitation and aperture geometry.
 
-Model: Paraxial Fresnel propagation from each slit
+Process:
+Field propagation, interference, and phase accumulation governed by paraxial wave optics.
 
-Output: A coherent imprint field at the detector plane
+Model:
+Independent Fresnel propagation from each slit, followed by superposition at the detection plane.
 
-At this stage, interference exists as a physical field structure, independent of detection or statistics.
+Output:
+A coherent imprint field at the detector plane.
 
-No observers, detectors, or digitization are involved.
+At this stage, interference exists as a physical field structure independent of detection, digitization, or statistics. No detectors, observers, or measurement operations are involved.
 
-Stage 2: Detector Plane Imaging (Measurement Coupling)
+5. Stage 2: Detector Plane Imaging (Measurement Coupling)
 
-This stage defines how the detector couples to the incoming field.
+This stage defines how the detector couples to the incoming imprint field.
 
 Two detector models are evaluated against the same imprint field:
 
-Correlation-preserving detector (PRESERVE)
+5.1 Correlation-Preserving Detector (PRESERVE)
 
-Detector response is proportional to
+The detector response is proportional to:
 
-∣
-𝜓
-1
-+
-𝜓
-2
-∣
-2
-∣ψ
-1
-	​
+∣ψ1​+ψ2​∣2
 
-+ψ
-2
-	​
+Phase correlations between propagation paths are retained, and interference fringes are expressed directly in the detector signal.
 
-∣
-2
+5.2 Correlation-Destroying Detector (DESTROY)
 
-Phase correlations between paths are retained
+The detector response is proportional to:
 
-Interference fringes are physically expressed in the detector signal
+∣ψ1​∣2+∣ψ2​∣2
 
-Correlation-destroying detector (DESTROY)
+Phase correlations are discarded locally at the detector plane, and no interference structure is present in the signal.
 
-Detector response is proportional to
+This distinction models differences between detector architectures rather than interpretive choices. Once correlations are destroyed at this stage, they cannot be recovered downstream.
 
-∣
-𝜓
-1
-∣
-2
-+
-∣
-𝜓
-2
-∣
-2
-∣ψ
-1
-	​
+6. Stage 3: Data Acquisition Integrity (DAQ)
 
-∣
-2
-+∣ψ
-2
-	​
-
-∣
-2
-
-Phase correlations are lost locally at detection
-
-No interference structure is present in the signal
-
-This distinction models real differences between detector architectures, not interpretive choices.
-
-Once correlations are destroyed at this stage, they cannot be recovered downstream.
-
-Stage 3: DAQ Integrity (Digitization and Noise)
-
-Input: Analog detector signals
+Input:
+Analog detector signals.
 
 Process:
 
@@ -130,34 +87,31 @@ Poisson shot noise (photon counting statistics)
 
 Frame-based accumulation
 
-Output: Discrete digital datasets
+Output:
+Discrete digital datasets.
 
-Multiple frames are accumulated to simulate realistic data acquisition.
+Increasing the number of accumulated frames reduces statistical noise but does not generate interference if correlations were destroyed at the detector plane.
 
-Importantly:
+7. Stage 4: Quantum Diagnostics
 
-Increasing frame count averages noise
-
-It does not create interference if it was destroyed earlier
-
-Stage 4: Quantum Diagnostics (Inference Only)
-
-Input: Digitized datasets
+Input:
+Digitized datasets.
 
 Metrics computed:
 
-Visibility (contrast)
+Fringe visibility
 
 Statistical uncertainty
 
-Output: Validated diagnostic metrics
+Output:
+Validated diagnostic metrics.
 
-No control actions occur here.
-This stage performs inference only, making no assumptions about underlying ontology.
+This stage performs inference only and applies no control actions or interpretive assumptions.
 
-Stage 5: Quantum Control System (QCS)
+8. Stage 5: Quantum Control System (QCS)
 
-Input: Diagnostic metrics and thresholds
+Input:
+Diagnostic metrics and predefined thresholds.
 
 Function:
 
@@ -166,14 +120,11 @@ Accept, reject, or continue benchmark runs
 Adjust frame budget or detector mode for future runs
 
 Constraint:
+The QCS acts only forward in time and does not reinterpret previously acquired data.
 
-Acts only forward in time
+In QMCTB-01 v1.0, parameters are locked and the benchmark is frozen upon acceptance.
 
-Does not reinterpret prior data
-
-In QMCTB-01 v1.0, parameters are locked and the benchmark is frozen after acceptance.
-
-Benchmark Criterion
+9. Benchmark Acceptance Criteria
 
 The benchmark is considered PASSED if:
 
@@ -183,22 +134,22 @@ Visibility in the DESTROY path remains low after sufficient averaging
 
 Results are stable across increasing frame counts
 
-This demonstrates that detector-plane coupling alone determines interference visibility for a fixed upstream field.
+These criteria demonstrate that detector-plane coupling alone determines interference visibility for a fixed upstream field.
 
-What This Benchmark Does Not Claim
+10. Scope and Non-Claims
 
-No new quantum mechanics
+QMCTB-01 makes no claims regarding:
 
-No modification of wave-particle duality
+New quantum mechanics
 
-No claim about single-photon ontology
+Wave-particle duality reinterpretation
 
-No reinterpretation of collapse
+Single-photon ontology
 
-QMCTB-01 is strictly a causal, operational benchmark.
+Collapse mechanisms
 
-Summary Statement
+The benchmark is strictly operational and causal in scope.
 
-QMCTB-01 shows that, within a conventional double-slit geometry, the presence or absence of interference fringes is fully accounted for by local detector-plane correlation handling, without invoking observer-dependent explanations or nonlocal mechanisms.
+11. Summary
 
-The benchmark formalizes this insight into a reproducible, diagnosable, and controllable test suitable for integration into a Quantum Measurement & Control Test Bench.
+QMCTB-01 demonstrates that, within a conventional double-slit geometry, the presence or absence of interference fringes is fully determined by local detector-plane correlation handling. The benchmark formalizes this result into a reproducible, diagnosable test suitable for integration into a Quantum Measurement & Control Test Bench.
