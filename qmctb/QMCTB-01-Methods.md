@@ -8,6 +8,12 @@ The objective of QMCTB-01 is to determine whether interference visibility is con
 
 No modifications are made to physical laws, source properties, or propagation dynamics. All deviations from textbook descriptions arise solely from the explicit separation of measurement into irreversible operational layers.
 
+
+Instrument-Level Surrogate Validation
+
+The simulations presented in QMCTB-01 are implemented as instrument-level surrogates, not illustrative numerical examples. Detector-plane operations, including correlation preservation or destruction, are explicitly enforced within the simulated measurement pipeline rather than applied via post-processing. In this role, the simulations serve the same epistemic function as laboratory instrumentation tests: they delineate operational regimes, identify irreversibility boundaries, and establish falsifiable constraints on detector-plane coherence fidelity. Experimental implementations may substitute hardware-specific detector parameters while preserving the benchmark’s causal structure, enabling direct mapping between simulated outcomes and realizable detector pipelines without modifying upstream
+
+
 2. Physical Geometry (Unmodified)
 
 The physical layout corresponds to a standard near-field double-slit configuration:
