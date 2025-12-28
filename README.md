@@ -12,6 +12,25 @@ defined as the complete detector–electronics–software measurement pipeline.
 
 ---
 
+## Protocol Status: QMCTB v1.0 (Frozen)
+
+The **QMCTB v1.0 detector-plane causality benchmark** is **frozen**.
+
+This means:
+- The measurement boundary definition is fixed
+- The causal decomposition is fixed
+- Benchmark logic, pass/fail criteria, and interpretation rules are fixed
+- No parameter, algorithmic, or structural changes are permitted within v1.0
+
+The frozen protocol specification and custodial scope are defined in:
+
+📄 **`QMCTB-01_v1.0_Freeze_and_Custody.md`**
+
+Future extensions or alternative benchmarks will be released only under new
+version identifiers and will not retroactively modify QMCTB v1.0.
+
+---
+
 ## Canonical Measurement Stack
 
 ![Quantum Measurement Stack](./qmctb/artifacts/QMCTB-01_Measurement_Stack_BlockDiagram.png)
