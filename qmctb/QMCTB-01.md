@@ -1,4 +1,12 @@
 
+**Archival reference:**  
+QMCTB-01 v1.0 is archived on Zenodo under DOI
+https://doi.org/10.5281/zenodo.17966568.
+
+This document reflects the protocol structure corresponding to that release.
+
+
+
 # QMCTB-01 — Detector-Plane Causality Benchmark
 
 **Status:** 🔒 Frozen (Baseline Benchmark)
@@ -185,4 +193,6 @@ A QMCTB-01 run is considered **PASS** if and only if:
    - `FailureClass.NONE`
 
 Any violation constitutes a **FAIL**.
+
+
 
