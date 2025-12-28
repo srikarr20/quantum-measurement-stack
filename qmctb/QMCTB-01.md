@@ -1,7 +1,8 @@
 
 **Archival reference:**  
 QMCTB-01 v1.0 is archived on Zenodo under DOI
-https://doi.org/10.5281/zenodo.17966568.
+
+https://doi.org/10.5281/zenodo.18075090
 
 This document reflects the protocol structure corresponding to that release.
 

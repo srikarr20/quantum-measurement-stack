@@ -2,7 +2,7 @@
 # Quantum Measurement Stack
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18075090.svg)](https://doi.org/10.5281/zenodo.18075090)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18075090.svg)]
 
 **Authoritative QMCTB-01 v1.0 archive:**  
 https://doi.org/10.5281/zenodo.18075090
@@ -91,6 +91,6 @@ If you use this framework, please cite:
 
 S. Rallabandi, *Quantum Measurement & Control Test Bench (QMCTB-01): Detector Plane
 Causality Benchmark*, Zenodo (2025).  
-https://doi.org/10.5281/zenodo.17966568
 
+https://doi.org/10.5281/zenodo.18075090
 
