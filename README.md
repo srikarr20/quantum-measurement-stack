@@ -1,7 +1,11 @@
 
 # Quantum Measurement Stack
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17966568.svg)](https://doi.org/10.5281/zenodo.17966568)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18075090.svg)](https://doi.org/10.5281/zenodo.18075090)
+
+**Authoritative QMCTB-01 v1.0 archive:**  
+https://doi.org/10.5281/zenodo.18075090
 
 The **Quantum Measurement Stack (QMS)** is an instrumentation-focused framework
 that treats quantum measurement as a causally ordered pipeline, rather than a
