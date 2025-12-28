@@ -1,6 +1,9 @@
 # QMCTB-01 v1.0  
 ## Protocol Freeze and Custodial Declaration
 
+**Authoritative archive (Zenodo DOI):**  
+https://doi.org/10.5281/zenodo.18075090
+
 **Status:** Frozen | Stable | Citable
 
 ---
